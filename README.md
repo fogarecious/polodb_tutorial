@@ -1,2 +1,76 @@
-# polodb_tutorial
-Tutorial of PoloDB
+# Simple PoloDB Tutorial
+
+[PoloDB](https://github.com/PoloDB/PoloDB) is a lightweight [MongoDB](https://www.mongodb.com/).
+This tutorial serves as a quick start for [PoloDB](https://github.com/PoloDB/PoloDB).
+We try to keep each part of the tutorial as simple as possible.
+
+## Quick Start
+
+* Setting Up
+* First Example
+* Databases, Collections And Documents
+
+## Databases
+
+* Opening Databases
+  * Opening Databases In Memory
+  * Opening Databases In File Systems
+* Dropping Databases
+
+## Collections
+
+* Creating Collections
+* Obtaining Collections
+* Dropping Collections
+
+## Documents
+
+* Inserting Documents
+  * Inserting A Document
+  * Inserting Multiple Documents
+* Finding Documents
+  * Finding All Documents
+  * Finding With Filters
+    * By An Entry
+    * And
+    * Or
+    * Not Equal
+    * Greater Than / Less Than
+    * Any One In Array / Anything Other Than Array
+    * Regular Expressions
+    * Multiple Conditions Together
+  * Finding At Most One Document
+* Updating Documents
+  * Setting Fields
+  * Conditional Setting Fields
+  * Increasing Fields
+  * Multiplying Fields
+  * Renaming Fields
+  * Removing Fields
+* Deleting Documents
+  * Deleting By Fields
+  * Deleting By Other Conditions
+
+## Indexes
+
+* Creating Indexes
+* Unique Fields
+* Dropping Indexes
+
+## Miscellaneous
+
+* Custom Types
+* Transactions
+
+## See Also
+
+* [PoloDB](https://github.com/PoloDB/PoloDB) - the embedded document database.
+* [Documentations](https://www.polodb.org/docs) - an official introductory documentation about PoloDB.
+
+## Contributions
+
+Pull requests for typos, incorrect information, or other ideas are welcome!
+
+## License
+
+All code in the tutorial is provided under the MIT License.
