@@ -6,7 +6,7 @@ We try to keep each part of the tutorial as simple as possible.
 
 ## Quick Start
 
-* Setting Up
+* [Setting Up](./tutorial/setting_up.md)
 * First Example
 * Databases, Collections And Documents
 
