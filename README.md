@@ -34,27 +34,27 @@ We try to keep each part of the tutorial as simple as possible.
     * By An Entry
     * And
     * Or
-    * Not Equal
+    <!-- * Not Equal -->
     * Greater Than / Less Than
     * Any One In Array / Anything Other Than Array
     * Regular Expressions
     * Multiple Conditions Together
   * Finding At Most One Document
 * Updating Documents
-  * Setting Fields
-  * Conditional Setting Fields
-  * Increasing Fields
-  * Multiplying Fields
-  * Renaming Fields
-  * Removing Fields
+  * Setting Entries
+  * Conditional Setting Entries
+  * Increasing Entries
+  * Multiplying Entries
+  * Renaming Entries
+  * Removing Entries
 * Deleting Documents
-  * Deleting By Fields
+  * Deleting By Entries
   * Deleting By Other Conditions
 
 ## Indexes
 
 * Creating Indexes
-* Unique Fields
+* Unique Entries
 * Dropping Indexes
 
 ## Miscellaneous
