@@ -21,6 +21,6 @@ The dependencies in `Cargo.toml` file should look like this:
 polodb_core = "4.4.2"
 ```
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [First Example](./first_example.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
