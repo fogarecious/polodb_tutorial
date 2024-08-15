@@ -8,7 +8,7 @@ We try to keep each part of the tutorial as simple as possible.
 
 * [Setting Up](./tutorial/setting_up.md)
 * [First Example](./tutorial/first_example.md)
-* Databases, Collections And Documents
+* [Databases, Collections And Documents](./tutorial/databases_collections_and_documents.md)
 
 ## Databases
 

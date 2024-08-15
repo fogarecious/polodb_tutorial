@@ -43,6 +43,6 @@ Document({
 
 We will explain every parts of the example in detail later.
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Databases, Collections And Documents](./databases_collections_and_documents.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
