@@ -27,6 +27,6 @@ A Collection may contain multiple *Documents*.
 A Document is of type [JSON](https://www.json.org/).
 It is possible to have Documents of custom types.
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Opening Databases In Memory](./opening_databases_in_memory.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
