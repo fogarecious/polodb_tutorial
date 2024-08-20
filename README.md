@@ -17,7 +17,7 @@ We try to keep each part of the tutorial as simple as possible.
 * Opening Databases
   * [Opening Databases In Memory](./tutorial/opening_databases_in_memory.md)
   * [Opening Databases In File Systems](./tutorial/opening_databases_in_file_systems.md)
-* Dropping Databases
+* [Dropping Databases](./tutorial/dropping_databases.md)
 
 ## Collections
 

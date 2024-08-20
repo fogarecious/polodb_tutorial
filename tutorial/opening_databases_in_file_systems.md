@@ -79,6 +79,6 @@ Document({
 
 This is because the program reads a document from the file that is created when we run the program at the first time, and then we insert another document at the second run.
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Dropping Databases](./dropping_databases.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
