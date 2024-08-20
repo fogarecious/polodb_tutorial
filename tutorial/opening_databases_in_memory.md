@@ -1,6 +1,6 @@
 # Opening Databases In Memory
 
-To open a database in memory, we can use [open_memory()](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html#method.open_memory) of [Database](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html).
+To open a database in memory, we can use [open_memory()](https://docs.rs/polodb_core/4.4.2/polodb_core/struct.Database.html#method.open_memory) of [Database](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html).
 
 ```rust
 let db = Database::open_memory().unwrap();

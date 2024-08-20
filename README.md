@@ -4,6 +4,8 @@
 This tutorial serves as a quick start for [PoloDB](https://github.com/PoloDB/PoloDB).
 We try to keep each part of the tutorial as simple as possible.
 
+(The tutorial is for PoloDB version 4.4.2.)
+
 ## Quick Start
 
 * [Setting Up](./tutorial/setting_up.md)
