@@ -21,7 +21,7 @@ We try to keep each part of the tutorial as simple as possible.
 
 ## Collections
 
-* Creating Collections
+* [Creating Collections](./tutorial/creating_collections.md)
 * Obtaining Collections
 * Dropping Collections
 
