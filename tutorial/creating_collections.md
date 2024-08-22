@@ -1,7 +1,7 @@
 # Creating Collections
 
 A database may have many collections.
-To create a collection, we use [create_collection](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html#method.create_collection)
+To create a collection, we can use [create_collection](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html#method.create_collection) of [Database](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html)
 
 ```rust
 let db = Database::open_memory().unwrap();
@@ -10,7 +10,7 @@ db.create_collection("name_of_the_collection").unwrap();
 
 where `name_of_the_collection` is the name (of the created collection) that is used for accessing the collection later.
 
-The other way to create a collection is by using [collection](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html#method.collection).
+The other way to create a collection is by using [collection](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html#method.collection) of [Database](https://docs.rs/polodb_core/latest/polodb_core/struct.Database.html).
 
 ```rust
 let db = Database::open_memory().unwrap();
