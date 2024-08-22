@@ -32,6 +32,6 @@ fn main() {
 }
 ```
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Obtaining Collections](./obtaining_collections.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
