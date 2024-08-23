@@ -23,7 +23,7 @@ We try to keep each part of the tutorial as simple as possible.
 
 * [Creating Collections](./tutorial/creating_collections.md)
 * [Obtaining Collections](./tutorial/obtaining_collections.md)
-* Dropping Collections
+* [Dropping Collections](./tutorial/dropping_collections.md)
 
 ## Documents
 

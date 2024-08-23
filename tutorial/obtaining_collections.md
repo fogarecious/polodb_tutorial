@@ -22,6 +22,6 @@ Output:
 Ok(["collection 1", "collection 2"])
 ```
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Dropping Collections](./dropping_collections.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
