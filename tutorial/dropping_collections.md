@@ -26,6 +26,6 @@ Ok(["name_of_the_collection"])
 Ok([])
 ```
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Inserting A Document](./inserting_a_document.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
