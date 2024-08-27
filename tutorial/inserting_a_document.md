@@ -1,6 +1,6 @@
 # Inserting A Document
 
-We can use [insert_one](https://docs.rs/polodb_core/latest/polodb_core/trait.CollectionT.html#tymethod.insert_one) to insert a document to a [Collection](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html).
+We can use [insert_one](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html#method.insert_one) to insert a document to a [Collection](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html).
 
 ```rust
 collection.insert_one(/* a document */).unwrap();
