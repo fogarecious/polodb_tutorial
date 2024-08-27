@@ -44,6 +44,6 @@ Output:
 InsertOneResult { inserted_id: ObjectId("66b3bc1e5c6165633b65f593") }
 ```
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Inserting Multiple Documents](./inserting_multiple_documents.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
