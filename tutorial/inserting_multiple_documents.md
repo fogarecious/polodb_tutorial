@@ -48,6 +48,6 @@ InsertManyResult { inserted_ids: {0: ObjectId("66b4cbac508a17ca0d9e5b57"), 1: Ob
 
 Note that documents can contain different entries (such as `Age` and `Height`) even if they are inserted together.
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Finding All Documents](./finding_all_documents.md)
 
 :blue_book: Back: [Table of contents](./../README.md)

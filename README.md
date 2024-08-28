@@ -31,7 +31,7 @@ We try to keep each part of the tutorial as simple as possible.
   * [Inserting A Document](./tutorial/inserting_a_document.md)
   * [Inserting Multiple Documents](./tutorial/inserting_multiple_documents.md)
 * Finding Documents
-  * Finding All Documents
+  * [Finding All Documents](./tutorial/finding_all_documents.md)
   * Finding With Filters
     * By An Entry
     * And
