@@ -69,6 +69,6 @@ Document({
 
 For each document, there is an entry `_id`, which is the unique id of the document and is created automatically.
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [By An Entry](./by_an_entry.md)
 
 :blue_book: Back: [Table of contents](./../README.md)

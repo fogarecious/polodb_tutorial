@@ -33,7 +33,7 @@ We try to keep each part of the tutorial as simple as possible.
 * Finding Documents
   * [Finding All Documents](./tutorial/finding_all_documents.md)
   * Finding With Filters
-    * By An Entry
+    * [By An Entry](./tutorial/by_an_entry.md)
     * And
     * Or
     <!-- * Not Equal -->
