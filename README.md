@@ -35,7 +35,7 @@ We try to keep each part of the tutorial as simple as possible.
   * Finding With Filters
     * [By An Entry](./tutorial/by_an_entry.md)
     * [And](./tutorial/and.md)
-    * Or
+    * [Or](./tutorial/or.md)
     <!-- * Not Equal -->
     * Greater Than / Less Than
     * Any One In Array / Anything Other Than Array
