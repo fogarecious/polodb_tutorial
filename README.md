@@ -38,8 +38,12 @@ We try to keep each part of the tutorial as simple as possible.
     * [Or](./tutorial/or.md)
     <!-- * Not Equal -->
     * Greater Than / Less Than
-    * Any One In Array / Anything Other Than Array
-    * Regular Expressions
+    <!-- $ne not works -->
+    * Any One In Array
+    <!-- * Regular Expressions -->
+    <!-- $regex not works -->
+    <!-- find(doc! {"Name": {"$regex": Regex { pattern: "a".into(), options: "i".into() }}}) -->
+    * Excluding Specified Entries
     * Multiple Conditions Together
   * Finding At Most One Document
 * Updating Documents
