@@ -37,8 +37,8 @@ We try to keep each part of the tutorial as simple as possible.
     * [And](./tutorial/and.md)
     * [Or](./tutorial/or.md)
     <!-- * Not Equal -->
-    * Greater Than / Less Than
     <!-- $ne not works -->
+    * [Greater Than / Less Than](./tutorial/greater_than_less_than.md)
     * Any One In Array
     <!-- * Regular Expressions -->
     <!-- $regex not works -->

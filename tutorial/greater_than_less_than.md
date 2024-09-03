@@ -1,14 +1,15 @@
-# Or
+# Greater Than / Less Than
 
-Sometimes, we want to specify several entry conditions and find the documents that satisfy any of the conditions.
-In this case, we can use `$or`.
+If values of an entry are numbers, we can compare the sizes of the values when we retrieve documents.
+We can filter the documents that have the entry value larger (or smaller) than a given entry value.
 
 ```rust
-collection.find(doc! { "$or": [{ "Age": 3 }, { "Height": 190 }]}).unwrap()
+collection.find(doc! {"Height": {"$gt": 185}}).unwrap();
 ```
 
-In the example above, we retrieve the documents that have `Age` equal to `3` or have `Height` equal to `190`.
-Additionally, we can add more such conditions as many as we like.
+The example above finds the documents with `Height` larger than `185`.
+
+In addition to `$gt`, we can use `$lt` for *less than*, `$gte` for *greater than or equal to*, and `$lte` for *less than or equal to*.
 
 The complete code is presented below:
 
@@ -37,14 +38,7 @@ fn main() {
     ];
     collection.insert_many(docs).unwrap();
 
-    let docs_found = collection
-        .find(doc! {
-            "$or": [
-                { "Age": 3 },
-                { "Height": 190 },
-            ],
-        })
-        .unwrap();
+    let docs_found = collection.find(doc! {"Height": {"$gt": 185}}).unwrap();
     for doc in docs_found {
         println!("{:#?}", doc.unwrap());
     }
@@ -65,22 +59,13 @@ Document({
         190,
     ),
     "_id": ObjectId(
-        "66b61a9ec02e7e0e4b35e0a0",
-    ),
-})
-Document({
-    "Name": String(
-        "Cat",
-    ),
-    "Age": Int32(
-        3,
-    ),
-    "_id": ObjectId(
-        "66b61a9ec02e7e0e4b35e0a2",
+        "66ba285f89a2c920077fb007",
     ),
 })
 ```
 
-:arrow_right:  Next: [Greater Than / Less Than](./greater_than_less_than.md)
+Note that, since `Cat` has no `Height` entry, it will not be output.
+
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)
