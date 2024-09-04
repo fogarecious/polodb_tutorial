@@ -1,15 +1,12 @@
-# Greater Than / Less Than
+# Any One In An Array
 
-If values of an entry are numbers, we can compare the sizes of the values when we retrieve documents.
-We can filter the documents that have the entry value larger (or smaller) than a given entry value.
+We can specify an array of values and retrieve the documents with the entry that satisfies any of these values.
 
 ```rust
-collection.find(doc! {"Height": {"$gt": 185}}).unwrap();
+collection.find(doc! {"Age": {"$in": [3, 10, 21]}}).unwrap()
 ```
 
-The example above finds the documents with `Height` larger than `185`.
-
-In addition to `$gt`, we can use `$lt` for *less than*, `$gte` for *greater than or equal to*, and `$lte` for *less than or equal to*.
+The example above finds the documents that has `Age` being `3`, `10` or `21`.
 
 The complete code is presented below:
 
@@ -38,7 +35,7 @@ fn main() {
     ];
     collection.insert_many(docs).unwrap();
 
-    let docs_found = collection.find(doc! {"Height": {"$gt": 185}}).unwrap();
+    let docs_found = collection.find(doc! {"Age": {"$in": [3, 10, 21]}}).unwrap();
     for doc in docs_found {
         println!("{:#?}", doc.unwrap());
     }
@@ -59,13 +56,22 @@ Document({
         190,
     ),
     "_id": ObjectId(
-        "66ba285f89a2c920077fb007",
+        "66ba27972b81c79e2d5dad2d",
+    ),
+})
+Document({
+    "Name": String(
+        "Cat",
+    ),
+    "Age": Int32(
+        3,
+    ),
+    "_id": ObjectId(
+        "66ba27972b81c79e2d5dad2f",
     ),
 })
 ```
 
-Note that, since `Cat` has no `Height` entry, it will not be output.
-
-:arrow_right:  Next: [Any One In An Array](./any_one_in_an_array.md)
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)

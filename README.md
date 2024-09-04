@@ -37,11 +37,12 @@ We try to keep each part of the tutorial as simple as possible.
     * [And](./tutorial/and.md)
     * [Or](./tutorial/or.md)
     <!-- * Not Equal -->
-    <!-- $ne not works -->
+    <!-- $ne does not work -->
     * [Greater Than / Less Than](./tutorial/greater_than_less_than.md)
-    * Any One In Array
+    * [Any One In An Array](./tutorial/any_one_in_an_array.md)
+    <!-- $nin does not work -->
     <!-- * Regular Expressions -->
-    <!-- $regex not works -->
+    <!-- $regex does not work -->
     <!-- find(doc! {"Name": {"$regex": Regex { pattern: "a".into(), options: "i".into() }}}) -->
     * Excluding Specified Entries
     * Multiple Conditions Together
