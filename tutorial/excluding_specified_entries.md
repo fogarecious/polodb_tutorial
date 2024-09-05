@@ -1,12 +1,16 @@
-# Any One In An Array
+# Excluding Specified Entries
 
-We can specify an array of values and retrieve the documents with the entry that satisfies any of these values.
+Previously, we always find the documents satisfying the given entry conditions.
+Sometimes, we need the complement of the given entry conditions.
+In this case, we can use `$not`.
 
 ```rust
-collection.find(doc! {"Age": {"$in": [3, 10, 21]}}).unwrap()
+collection.find(doc! {"Age": {"$not": {"$eq": 21}}}).unwrap();
 ```
 
-The example above finds the documents that has `Age` being `3`, `10` or `21`.
+The example above finds the documents with all `Age`s except `21`.
+
+In addition to `$eq`, we can also use `$gt`, `$lt`, `$gte`, `$lte` and `$in` when we use `$not`.
 
 The complete code is presented below:
 
@@ -16,7 +20,7 @@ use polodb_core::{bson::doc, Database};
 fn main() {
     let db = Database::open_memory().unwrap();
     let collection = db.collection("name_of_the_collection");
-
+    
     let docs = [
         doc! {
             "Name": "Alice",
@@ -35,7 +39,9 @@ fn main() {
     ];
     collection.insert_many(docs).unwrap();
 
-    let docs_found = collection.find(doc! {"Age": {"$in": [3, 10, 21]}}).unwrap();
+    let docs_found = collection
+        .find(doc! {"Age": {"$not": {"$eq": 21}}})
+        .unwrap();
     for doc in docs_found {
         println!("{:#?}", doc.unwrap());
     }
@@ -47,16 +53,16 @@ Output:
 ```text
 Document({
     "Name": String(
-        "Alice",
+        "Bob",
     ),
     "Age": Int32(
-        21,
+        20,
     ),
     "Height": Int32(
-        190,
+        180,
     ),
     "_id": ObjectId(
-        "66ba27972b81c79e2d5dad2d",
+        "66d71616753702e9e36ae43c",
     ),
 })
 Document({
@@ -67,11 +73,11 @@ Document({
         3,
     ),
     "_id": ObjectId(
-        "66ba27972b81c79e2d5dad2f",
+        "66d71616753702e9e36ae43d",
     ),
 })
 ```
 
-:arrow_right:  Next: [Excluding Specified Entries](./excluding_specified_entries.md)
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)

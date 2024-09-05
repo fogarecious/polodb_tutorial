@@ -44,7 +44,7 @@ We try to keep each part of the tutorial as simple as possible.
     <!-- * Regular Expressions -->
     <!-- $regex does not work -->
     <!-- find(doc! {"Name": {"$regex": Regex { pattern: "a".into(), options: "i".into() }}}) -->
-    * Excluding Specified Entries
+    * [Excluding Specified Entries](./tutorial/excluding_specified_entries.md)
     * Multiple Conditions Together
   * Finding At Most One Document
 * Updating Documents
