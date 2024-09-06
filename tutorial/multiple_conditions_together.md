@@ -1,16 +1,12 @@
-# Excluding Specified Entries
+# Multiple Conditions Together
 
-Previously, we always find the documents satisfying the given entry conditions.
-Sometimes, we need the complement of the given entry conditions.
-In this case, we can use `$not`.
+Multiple entry conditions can be combined together.
 
 ```rust
-collection.find(doc! {"Age": {"$not": {"$eq": 21}}}).unwrap();
+collection.find(doc! {"Age": {"$gt": 10}, "Height": {"$not": {"$eq": 190}}}).unwrap();
 ```
 
-The example above finds the documents with all `Age`s except `21`.
-
-In addition to `$eq`, we can also use `$gt`, `$lt`, `$gte`, `$lte` and `$in` when we use `$not`.
+The example above finds the documents with `Age` being more than `10` as well as `Height` being not equal to `190`.
 
 The complete code is presented below:
 
@@ -38,9 +34,9 @@ fn main() {
         },
     ];
     collection.insert_many(docs).unwrap();
-
+    
     let docs_found = collection
-        .find(doc! {"Age": {"$not": {"$eq": 21}}})
+        .find(doc! {"Age": {"$gt": 10}, "Height": {"$not": {"$eq": 190}}})
         .unwrap();
     for doc in docs_found {
         println!("{:#?}", doc.unwrap());
@@ -62,22 +58,11 @@ Document({
         180,
     ),
     "_id": ObjectId(
-        "66d71616753702e9e36ae43c",
-    ),
-})
-Document({
-    "Name": String(
-        "Cat",
-    ),
-    "Age": Int32(
-        3,
-    ),
-    "_id": ObjectId(
-        "66d71616753702e9e36ae43d",
+        "66d7152ac2b07e12a63d66ca",
     ),
 })
 ```
 
-:arrow_right:  Next: [Multiple Conditions Together](./multiple_conditions_together.md)
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)
