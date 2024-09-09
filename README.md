@@ -46,7 +46,7 @@ We try to keep each part of the tutorial as simple as possible.
     <!-- find(doc! {"Name": {"$regex": Regex { pattern: "a".into(), options: "i".into() }}}) -->
     * [Excluding Specified Entries](./tutorial/excluding_specified_entries.md)
     * [Multiple Conditions Together](./tutorial/multiple_conditions_together.md)
-  * Finding At Most One Document
+  * [Finding At Most One Document](./tutorial/finding_at_most_one_document.md)
 * Updating Documents
   * Setting Entries
   * Conditional Setting Entries
