@@ -8,6 +8,7 @@ collection.update_many(doc! {"Color": "Blue"}, doc! {"$set": {"Type": "Blue box"
 ```
 
 The example above finds documents with `Color` being `Blue` and updates these documents by setting their `Type` to `Blue box`.
+We use `$set` to specify that we would like to replace entries.
 
 The complete code is presented below:
 
