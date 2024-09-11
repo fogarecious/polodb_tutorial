@@ -49,7 +49,7 @@ We try to keep each part of the tutorial as simple as possible.
   * [Finding At Most One Document](./tutorial/finding_at_most_one_document.md)
 * Updating Documents
   * [Setting Entries](./tutorial/setting_entries.md)
-  * Upper Limits / Lower Limits
+  * [Upper Limits / Lower Limits](./tutorial/upper_limits_lower_limits.md)
   * Increasing Entries
   * Multiplying Entries
   * Renaming Entries
