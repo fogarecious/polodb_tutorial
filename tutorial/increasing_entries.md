@@ -1,16 +1,12 @@
-# Upper Limits / Lower Limits
+# Increasing Entries
 
-When entry values are numbers, we can set an upper limit of all these entry values.
-This ensures that no such values are larger than the upper limit.
-More precisely, we will decrease a value to the limit if the value is more than the limit.
+If entry values are numbers, we can add an amount to the values of the selected documents.
 
 ```rust
-collection.update_many(doc! {"Price": {"$gt": 0}}, doc! {"$min": {"Price": 5}}).unwrap();
+collection.update_many(doc! {"Color": "Blue"}, doc! {"$inc": doc! {"Price": 5}}).unwrap();
 ```
 
-The example above finds all documents with `Price` more than `0` and sets their `Price`s to `5` if the `Price` is more than `5`.
-We use `$min` to specify that the new entry value should be the minimum of its old value and the given value.
-We can also use `$max` to specify a lower limit.
+The example above increases `Price` of the entries with `Color` `Blue` by `5`.
 
 The complete code is presented below:
 
@@ -20,7 +16,7 @@ use polodb_core::{bson::doc, Database};
 fn main() {
     let db = Database::open_memory().unwrap();
     let collection = db.collection("name_of_the_collection");
-    
+
     let docs = [
         doc! {
             "Type": "Box",
@@ -41,10 +37,10 @@ fn main() {
     collection.insert_many(docs).unwrap();
 
     let result = collection
-        .update_many(doc! {"Price": {"$gt": 0}}, doc! {"$min": {"Price": 5}})
+        .update_many(doc! {"Color": "Blue"}, doc! {"$inc": doc! {"Price": 5}})
         .unwrap();
     println!("{:?}", result);
-
+    
     let docs_found = collection.find(None).unwrap();
     for doc in docs_found {
         println!("{:#?}", doc.unwrap());
@@ -55,7 +51,7 @@ fn main() {
 Output:
 
 ```text
-UpdateResult { modified_count: 3 }
+UpdateResult { modified_count: 2 }
 Document({
     "Type": String(
         "Box",
@@ -64,10 +60,10 @@ Document({
         "Blue",
     ),
     "Price": Int32(
-        1,
+        6,
     ),
     "_id": ObjectId(
-        "66d998ce97a343c0ca8a31ff",
+        "66dac3a6db06a8ddebb868b7",
     ),
 })
 Document({
@@ -78,10 +74,10 @@ Document({
         "Blue",
     ),
     "Price": Int32(
-        5,
+        15,
     ),
     "_id": ObjectId(
-        "66d998ce97a343c0ca8a3200",
+        "66dac3a6db06a8ddebb868b8",
     ),
 })
 Document({
@@ -92,14 +88,16 @@ Document({
         "Yellow",
     ),
     "Price": Int32(
-        5,
+        20,
     ),
     "_id": ObjectId(
-        "66d998ce97a343c0ca8a3201",
+        "66dac3a6db06a8ddebb868b9",
     ),
 })
 ```
 
-:arrow_right:  Next: [Increasing Entries](./increasing_entries.md)
+Note that negative increments, say `-5`, are also possible.
+
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)
