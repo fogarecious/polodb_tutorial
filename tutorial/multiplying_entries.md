@@ -1,14 +1,14 @@
-# Increasing Entries
+# Multiplying Entries
 
-If entry values are numbers, we can add an amount to the values of the selected documents.
+If entry values are numbers, we can multiply selected entry values by a given number.
 
 ```rust
-collection.update_many(doc! {"Color": "Blue"}, doc! {"$inc": doc! {"Price": 5}}).unwrap();
+collection.update_many(doc! {"Color": "Blue"}, doc! {"$mul": doc! {"Price": 3}}).unwrap();
 ```
 
-The example above increases `Price` of the entries with `Color` `Blue` by `5`.
+The example above multiplies `Price` by `3` for entries with `Color` `Blue`.
 
-The complete code is presented below:
+The complete code is shown below:
 
 ```rust
 use polodb_core::{bson::doc, Database};
@@ -37,10 +37,10 @@ fn main() {
     collection.insert_many(docs).unwrap();
 
     let result = collection
-        .update_many(doc! {"Color": "Blue"}, doc! {"$inc": doc! {"Price": 5}})
+        .update_many(doc! {"Color": "Blue"}, doc! {"$mul": doc! {"Price": 3}})
         .unwrap();
     println!("{:?}", result);
-    
+
     let docs_found = collection.find(None).unwrap();
     for doc in docs_found {
         println!("{:#?}", doc.unwrap());
@@ -60,10 +60,10 @@ Document({
         "Blue",
     ),
     "Price": Int32(
-        6,
+        3,
     ),
     "_id": ObjectId(
-        "66dac3a6db06a8ddebb868b7",
+        "66e3e9528b1b7b201dcf7391",
     ),
 })
 Document({
@@ -74,10 +74,10 @@ Document({
         "Blue",
     ),
     "Price": Int32(
-        15,
+        30,
     ),
     "_id": ObjectId(
-        "66dac3a6db06a8ddebb868b8",
+        "66e3e9528b1b7b201dcf7392",
     ),
 })
 Document({
@@ -91,13 +91,11 @@ Document({
         20,
     ),
     "_id": ObjectId(
-        "66dac3a6db06a8ddebb868b9",
+        "66e3e9528b1b7b201dcf7393",
     ),
 })
 ```
 
-Note that negative increments, say `-5`, are also possible.
-
-:arrow_right:  Next: [Multiplying Entries](./multiplying_entries.md)
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)
