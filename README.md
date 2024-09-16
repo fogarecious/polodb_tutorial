@@ -52,7 +52,7 @@ We try to keep each part of the tutorial as simple as possible.
   * [Upper Limits / Lower Limits](./tutorial/upper_limits_lower_limits.md)
   * [Increasing Entries](./tutorial/increasing_entries.md)
   * [Multiplying Entries](./tutorial/multiplying_entries.md)
-  * Renaming Entries
+  * [Renaming Entries](./tutorial/renaming_entries.md)
   * Removing Entries
 * Deleting Documents
   * Deleting By Entries

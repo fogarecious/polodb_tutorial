@@ -1,14 +1,15 @@
-# Multiplying Entries
+# Renaming Entries
 
-If entry values are numbers, we can multiply selected entry values by a given number.
+Previously, we use `$set` to change entry values.
+To change entry names, we can use `$rename`.
 
 ```rust
-collection.update_many(doc! {"Color": "Blue"}, doc! {"$mul": doc! {"Price": 3}}).unwrap();
+collection.update_many(doc! {"Price": {"$lte": 10}}, doc! {"$rename": doc! {"Type": "Category"}}).unwrap();
 ```
 
-The example above multiplies `Price` by `3` for entries with `Color` `Blue`.
+The example above selects the documents with `Price` being at most `10` and updates their entry names from `Type` to `Category`.
 
-The complete code is shown below:
+The complete code is given below:
 
 ```rust
 use polodb_core::{bson::doc, Database};
@@ -20,24 +21,24 @@ fn main() {
     let docs = [
         doc! {
             "Type": "Box",
-            "Color": "Blue",
             "Price": 1,
         },
         doc! {
             "Type": "Box",
-            "Color": "Blue",
             "Price": 10,
         },
         doc! {
-            "Type": "Box",
-            "Color": "Yellow",
+            "Category": "Box",
             "Price": 20,
         },
     ];
     collection.insert_many(docs).unwrap();
 
     let result = collection
-        .update_many(doc! {"Color": "Blue"}, doc! {"$mul": doc! {"Price": 3}})
+        .update_many(
+            doc! {"Price": {"$lte": 10}},
+            doc! {"$rename": doc! {"Type": "Category"}},
+        )
         .unwrap();
     println!("{:?}", result);
 
@@ -53,49 +54,40 @@ Output:
 ```text
 UpdateResult { modified_count: 2 }
 Document({
-    "Type": String(
-        "Box",
-    ),
-    "Color": String(
-        "Blue",
-    ),
     "Price": Int32(
-        3,
+        1,
     ),
     "_id": ObjectId(
-        "66e3e9528b1b7b201dcf7391",
+        "66e3ebed70920585c379257a",
+    ),
+    "Category": String(
+        "Box",
     ),
 })
 Document({
-    "Type": String(
-        "Box",
-    ),
-    "Color": String(
-        "Blue",
-    ),
     "Price": Int32(
-        30,
+        10,
     ),
     "_id": ObjectId(
-        "66e3e9528b1b7b201dcf7392",
+        "66e3ebed70920585c379257b",
+    ),
+    "Category": String(
+        "Box",
     ),
 })
 Document({
-    "Type": String(
+    "Category": String(
         "Box",
-    ),
-    "Color": String(
-        "Yellow",
     ),
     "Price": Int32(
         20,
     ),
     "_id": ObjectId(
-        "66e3e9528b1b7b201dcf7393",
+        "66e3ebed70920585c379257c",
     ),
 })
 ```
 
-:arrow_right:  Next: [Renaming Entries](./renaming_entries.md)
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)
