@@ -1,15 +1,14 @@
-# Renaming Entries
+# Removing Entries
 
-Previously, we use `$set` to change entry values.
-To change entry names, we can use `$rename`.
+We can use `$unset` to remove an entry of selected documents.
 
 ```rust
-collection.update_many(doc! {"Price": {"$lte": 10}}, doc! {"$rename": doc! {"Type": "Category"}}).unwrap();
+collection.update_many(doc! {"Type": "Box"}, doc! {"$unset": doc! {"Type": ""}}).unwrap();
 ```
 
-The example above selects the documents with `Price` being at most `10` and updates their entry names from `Type` to `Category`.
+The example above selects documents with `Type` of `Box` and removes the entry `Type` from the documents.
 
-The complete code is given below:
+The complete code is shown here:
 
 ```rust
 use polodb_core::{bson::doc, Database};
@@ -20,10 +19,12 @@ fn main() {
 
     let docs = [
         doc! {
+            "Category": "Box",
             "Type": "Box",
             "Price": 1,
         },
         doc! {
+            "Category": "Box",
             "Type": "Box",
             "Price": 10,
         },
@@ -35,10 +36,7 @@ fn main() {
     collection.insert_many(docs).unwrap();
 
     let result = collection
-        .update_many(
-            doc! {"Price": {"$lte": 10}},
-            doc! {"$rename": doc! {"Type": "Category"}},
-        )
+        .update_many(doc! {"Type": "Box"}, doc! {"$unset": doc! {"Type": ""}})
         .unwrap();
     println!("{:?}", result);
 
@@ -54,25 +52,25 @@ Output:
 ```text
 UpdateResult { modified_count: 2 }
 Document({
+    "Category": String(
+        "Box",
+    ),
     "Price": Int32(
         1,
     ),
     "_id": ObjectId(
-        "66e3ebed70920585c379257a",
-    ),
-    "Category": String(
-        "Box",
+        "66e3ee68de29cc9a4a992cf3",
     ),
 })
 Document({
+    "Category": String(
+        "Box",
+    ),
     "Price": Int32(
         10,
     ),
     "_id": ObjectId(
-        "66e3ebed70920585c379257b",
-    ),
-    "Category": String(
-        "Box",
+        "66e3ee68de29cc9a4a992cf4",
     ),
 })
 Document({
@@ -83,11 +81,11 @@ Document({
         20,
     ),
     "_id": ObjectId(
-        "66e3ebed70920585c379257c",
+        "66e3ee68de29cc9a4a992cf5",
     ),
 })
 ```
 
-:arrow_right:  Next: [Removing Entries](./removing_entries.md)
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)

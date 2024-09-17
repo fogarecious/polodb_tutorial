@@ -53,7 +53,7 @@ We try to keep each part of the tutorial as simple as possible.
   * [Increasing Entries](./tutorial/increasing_entries.md)
   * [Multiplying Entries](./tutorial/multiplying_entries.md)
   * [Renaming Entries](./tutorial/renaming_entries.md)
-  * Removing Entries
+  * [Removing Entries](./tutorial/removing_entries.md)
   * Updating At Most One Document
 * Deleting Documents
   * Deleting By Entries
