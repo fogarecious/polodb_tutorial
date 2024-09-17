@@ -54,6 +54,7 @@ We try to keep each part of the tutorial as simple as possible.
   * [Multiplying Entries](./tutorial/multiplying_entries.md)
   * [Renaming Entries](./tutorial/renaming_entries.md)
   * Removing Entries
+  * Updating At Most One Document
 * Deleting Documents
   * Deleting By Entries
   * Deleting By Other Conditions
