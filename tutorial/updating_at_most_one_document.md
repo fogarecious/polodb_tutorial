@@ -99,6 +99,6 @@ Document({
 })
 ```
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Deleting All Selected Documents](./deleting_all_selected_documents.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
