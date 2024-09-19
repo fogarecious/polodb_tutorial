@@ -56,8 +56,8 @@ We try to keep each part of the tutorial as simple as possible.
   * [Removing Entries](./tutorial/removing_entries.md)
   * [Updating At Most One Document](./tutorial/updating_at_most_one_document.md)
 * Deleting Documents
-  * Deleting By Other Conditions
   * Deleting All Selected Documents
+  * Deleting At Most One Document
 
 ## Indexes
 
