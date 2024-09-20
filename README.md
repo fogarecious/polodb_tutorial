@@ -57,7 +57,7 @@ We try to keep each part of the tutorial as simple as possible.
   * [Updating At Most One Document](./tutorial/updating_at_most_one_document.md)
 * Deleting Documents
   * [Deleting All Selected Documents](./tutorial/deleting_all_selected_documents.md)
-  * Deleting At Most One Document
+  * [Deleting At Most One Document](./tutorial/deleting_at_most_one_document.md)
 
 ## Indexes
 

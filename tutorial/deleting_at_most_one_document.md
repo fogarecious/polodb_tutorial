@@ -1,14 +1,14 @@
-# Deleting All Selected Documents
+# Deleting At Most One Document
 
-The method [delete_many](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html#method.delete_many) finds documents and delete them.
+Similar to [find_one](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html#method.find_one) and [update_one](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html#method.update_one), we have [delete_one](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html#method.delete_one), which deletes at most one selected document.
 
 ```rust
-collection.delete_many(doc! {"Category": "Blue box"}).unwrap();
+collection.delete_one(doc! {"Category": "Blue box"}).unwrap();
 ```
 
-The example above selects documents with entry `"Category": "Blue box"` and deletes them.
+The example above selects documents with entry `"Category": "Blue box"` and deletes the first selected document.
 
-Here is the complete code:
+The complete code is shown below:
 
 ```rust
 use polodb_core::{bson::doc, Database};
@@ -34,10 +34,10 @@ fn main() {
     collection.insert_many(docs).unwrap();
 
     let result = collection
-        .delete_many(doc! {"Category": "Blue box"})
+        .delete_one(doc! {"Category": "Blue box"})
         .unwrap();
     println!("{:?}", result);
-
+    
     let docs_found = collection.find(None).unwrap();
     for doc in docs_found {
         println!("{:#?}", doc.unwrap());
@@ -48,7 +48,18 @@ fn main() {
 Output:
 
 ```text
-DeleteResult { deleted_count: 2 }
+DeleteResult { deleted_count: 1 }
+Document({
+    "Category": String(
+        "Blue box",
+    ),
+    "Price": Int32(
+        2,
+    ),
+    "_id": ObjectId(
+        "66e3fb3c82994f4cca2de956",
+    ),
+})
 Document({
     "Category": String(
         "Yellow box",
@@ -57,13 +68,11 @@ Document({
         3,
     ),
     "_id": ObjectId(
-        "66e3fa369d5d8926ea15f837",
+        "66e3fb3c82994f4cca2de957",
     ),
 })
 ```
 
-The conditions passed to [delete_many](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html#method.delete_many) are the same as we used for [find](https://docs.rs/polodb_core/latest/polodb_core/struct.Collection.html#method.find).
-
-:arrow_right:  Next: [Deleting At Most One Document](./deleting_at_most_one_document.md)
+<!-- :arrow_right:  Next:  -->
 
 :blue_book: Back: [Table of contents](./../README.md)
