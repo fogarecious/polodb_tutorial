@@ -73,6 +73,6 @@ Document({
 })
 ```
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Creating Indexes](./creating_indexes.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
