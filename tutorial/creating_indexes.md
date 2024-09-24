@@ -76,6 +76,6 @@ Document({
 })
 ```
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Unique Entries](./unique_entries.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
