@@ -63,7 +63,7 @@ We try to keep each part of the tutorial as simple as possible.
 
 * [Creating Indexes](./tutorial/creating_indexes.md)
 * [Unique Entries](./tutorial/unique_entries.md)
-* Dropping Indexes
+* [Dropping Indexes](./tutorial/dropping_indexes.md)
 
 ## Miscellaneous
 

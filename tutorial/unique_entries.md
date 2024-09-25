@@ -46,6 +46,6 @@ Err(DuplicateKey(DuplicateKeyError { name: "Name_1", key: "\"Bob\"", ns: "name_o
 
 In the example, when we add a repeated entry, it throws an error.
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Dropping Indexes](./dropping_indexes.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
