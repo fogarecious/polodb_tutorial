@@ -49,6 +49,6 @@ Ok(InsertOneResult { inserted_id: ObjectId("66f160eeaf31a48fb03e3711") })
 
 Without the uniqueness constraint, we can add duplicated data.
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Custom Types](./custom_types.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
