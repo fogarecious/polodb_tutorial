@@ -68,7 +68,7 @@ We try to keep each part of the tutorial as simple as possible.
 ## Miscellaneous
 
 * [Custom Types](./tutorial/custom_types.md)
-* Transactions
+* [Transactions](./tutorial/transactions.md)
 
 ## See Also
 

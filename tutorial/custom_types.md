@@ -78,6 +78,6 @@ Student {
 
 Note that the current entry name is in lowercase.
 
-<!-- :arrow_right:  Next:  -->
+:arrow_right:  Next: [Transactions](./transactions.md)
 
 :blue_book: Back: [Table of contents](./../README.md)
